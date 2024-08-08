@@ -63,9 +63,17 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
         renderExpandedMenuItemIcon={{ icon: <i className='ri-circle-line' /> }}
         menuSectionStyles={menuSectionStyles(verticalNavOptions, theme)}
       >
-        <SubMenu
+        <MenuItem
+          href={`/${locale}/apps/ecommerce/dashboard`}
           label={dictionary['navigation'].dashboards}
           icon={<i className='ri-home-smile-line' />}
+        >
+          Tableau de bord
+        </MenuItem>
+        {/* <SubMenu
+          label={dictionary['navigation'].dashboards}
+          icon={<i className='ri-home-smile-line' />}
+
           suffix={<Chip label='5' size='small' color='error' />}
         >
           <MenuItem href={`/${locale}/dashboards/crm`}>{dictionary['navigation'].crm}</MenuItem>
@@ -73,35 +81,49 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
           <MenuItem href={`/${locale}/dashboards/ecommerce`}>{dictionary['navigation'].eCommerce}</MenuItem>
           <MenuItem href={`/${locale}/dashboards/academy`}>{dictionary['navigation'].academy}</MenuItem>
           <MenuItem href={`/${locale}/dashboards/logistics`}>{dictionary['navigation'].logistics}</MenuItem>
-        </SubMenu>
-        <SubMenu label={dictionary['navigation'].frontPages} icon={<i className='ri-file-copy-line' />}>
+        </SubMenu> */}
+        {/* <SubMenu label={dictionary['navigation'].frontPages} icon={<i className='ri-file-copy-line' />}>
           <MenuItem href='/front-pages/landing-page' target='_blank'>
             {dictionary['navigation'].landing}
           </MenuItem>
           <MenuItem href='/front-pages/pricing' target='_blank'>
             {dictionary['navigation'].pricing}
-          </MenuItem>
-          <MenuItem href='/front-pages/payment' target='_blank'>
+          </MenuItem> */}
+        {/* <MenuItem href='/front-pages/payment' target='_blank'>
             {dictionary['navigation'].payment}
-          </MenuItem>
-          <MenuItem href='/front-pages/checkout' target='_blank'>
+          </MenuItem> */}
+        {/* <MenuItem href='/front-pages/checkout' target='_blank'>
             {dictionary['navigation'].checkout}
-          </MenuItem>
-          <MenuItem href='/front-pages/help-center' target='_blank'>
+          </MenuItem> */}
+        {/* <MenuItem href='/front-pages/help-center' target='_blank'>
             {dictionary['navigation'].helpCenter}
           </MenuItem>
-        </SubMenu>
+        </SubMenu> */}
         <MenuSection label={dictionary['navigation'].appsPages}>
-          <SubMenu label={dictionary['navigation'].eCommerce} icon={<i className='ri-shopping-bag-3-line' />}>
-            <MenuItem href={`/${locale}/apps/ecommerce/dashboard`}>{dictionary['navigation'].dashboard}</MenuItem>
-            <SubMenu label={dictionary['navigation'].products}>
+          <MenuItem icon={<i className='ri-shopping-bag-3-line' />}>Catégorie</MenuItem>
+          <MenuItem href={`/${locale}/apps/ecommerce/products/list`} icon={<i className='ri-shopping-cart-line' />}>
+            Produit
+          </MenuItem>
+          <MenuItem href={`/${locale}/apps/ecommerce/orders/list`} icon={<i className='ri-bill-line' />}>
+            Commandes
+          </MenuItem>
+          <MenuItem icon={<i className='ri-shopping-bag-3-line' />} href=''>
+            Marque
+          </MenuItem>
+          <MenuItem icon={<i className='ri-shopping-bag-3-line' />} href=''>
+            Avis
+          </MenuItem>
+
+          {/* <SubMenu label={dictionary['navigation'].eCommerce} icon={<i className='ri-shopping-bag-3-line' />}> */}
+          {/* <MenuItem href={`/${locale}/apps/ecommerce/dashboard`}>{dictionary['navigation'].dashboard}</MenuItem> */}
+          {/* <SubMenu label={dictionary['navigation'].products}>
               <MenuItem href={`/${locale}/apps/ecommerce/products/list`}>{dictionary['navigation'].list}</MenuItem>
               <MenuItem href={`/${locale}/apps/ecommerce/products/add`}>{dictionary['navigation'].add}</MenuItem>
               <MenuItem href={`/${locale}/apps/ecommerce/products/category`}>
                 {dictionary['navigation'].category}
               </MenuItem>
-            </SubMenu>
-            <SubMenu label={dictionary['navigation'].orders}>
+            </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].orders}>
               <MenuItem href={`/${locale}/apps/ecommerce/orders/list`}>{dictionary['navigation'].list}</MenuItem>
               <MenuItem
                 href={`/${locale}/apps/ecommerce/orders/details/5434`}
@@ -110,8 +132,8 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
               >
                 {dictionary['navigation'].details}
               </MenuItem>
-            </SubMenu>
-            <SubMenu label={dictionary['navigation'].customers}>
+            </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].customers}>
               <MenuItem href={`/${locale}/apps/ecommerce/customers/list`}>{dictionary['navigation'].list}</MenuItem>
               <MenuItem
                 href={`/${locale}/apps/ecommerce/customers/details/879861`}
@@ -120,69 +142,69 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
               >
                 {dictionary['navigation'].details}
               </MenuItem>
-            </SubMenu>
-            <MenuItem href={`/${locale}/apps/ecommerce/manage-reviews`}>
+            </SubMenu> */}
+          {/* <MenuItem href={`/${locale}/apps/ecommerce/manage-reviews`}>
               {dictionary['navigation'].manageReviews}
-            </MenuItem>
-            <MenuItem href={`/${locale}/apps/ecommerce/referrals`}>{dictionary['navigation'].referrals}</MenuItem>
-            <MenuItem href={`/${locale}/apps/ecommerce/settings`}>{dictionary['navigation'].settings}</MenuItem>
-          </SubMenu>
-          <SubMenu label={dictionary['navigation'].academy} icon={<i className='ri-graduation-cap-line' />}>
+            </MenuItem> */}
+          {/* <MenuItem href={`/${locale}/apps/ecommerce/referrals`}>{dictionary['navigation'].referrals}</MenuItem>
+            <MenuItem href={`/${locale}/apps/ecommerce/settings`}>{dictionary['navigation'].settings}</MenuItem> */}
+          {/* </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].academy} icon={<i className='ri-graduation-cap-line' />}>
             <MenuItem href={`/${locale}/apps/academy/dashboard`}>{dictionary['navigation'].dashboard}</MenuItem>
             <MenuItem href={`/${locale}/apps/academy/my-courses`}>{dictionary['navigation'].myCourses}</MenuItem>
             <MenuItem href={`/${locale}/apps/academy/course-details`}>
               {dictionary['navigation'].courseDetails}
             </MenuItem>
-          </SubMenu>
-          <SubMenu label={dictionary['navigation'].logistics} icon={<i className='ri-car-line' />}>
+          </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].logistics} icon={<i className='ri-car-line' />}>
             <MenuItem href={`/${locale}/apps/logistics/dashboard`}>{dictionary['navigation'].dashboard}</MenuItem>
             <MenuItem href={`/${locale}/apps/logistics/fleet`}>{dictionary['navigation'].fleet}</MenuItem>
-          </SubMenu>
-          <MenuItem
+          </SubMenu> */}
+          {/* <MenuItem
             href={`/${locale}/apps/email`}
             exactMatch={false}
             activeUrl='/apps/email'
             icon={<i className='ri-mail-open-line' />}
           >
             {dictionary['navigation'].email}
-          </MenuItem>
-          <MenuItem href={`/${locale}/apps/chat`} icon={<i className='ri-wechat-line' />}>
+          </MenuItem> */}
+          {/* <MenuItem href={`/${locale}/apps/chat`} icon={<i className='ri-wechat-line' />}>
             {dictionary['navigation'].chat}
-          </MenuItem>
-          <MenuItem href={`/${locale}/apps/calendar`} icon={<i className='ri-calendar-line' />}>
+          </MenuItem> */}
+          {/* <MenuItem href={`/${locale}/apps/calendar`} icon={<i className='ri-calendar-line' />}>
             {dictionary['navigation'].calendar}
-          </MenuItem>
-          <MenuItem href={`/${locale}/apps/kanban`} icon={<i className='ri-drag-drop-line' />}>
+          </MenuItem> */}
+          {/* <MenuItem href={`/${locale}/apps/kanban`} icon={<i className='ri-drag-drop-line' />}>
             {dictionary['navigation'].kanban}
-          </MenuItem>
-          <SubMenu label={dictionary['navigation'].invoice} icon={<i className='ri-bill-line' />}>
-            <MenuItem href={`/${locale}/apps/invoice/list`}>{dictionary['navigation'].list}</MenuItem>
-            <MenuItem
+          </MenuItem> */}
+          {/* <SubMenu label={dictionary['navigation'].invoice} icon={<i className='ri-bill-line' />}> */}
+          {/* <MenuItem href={`/${locale}/apps/invoice/list`}>{dictionary['navigation'].list}</MenuItem> */}
+          {/* <MenuItem
               href={`/${locale}/apps/invoice/preview/4987`}
               exactMatch={false}
               activeUrl='/apps/invoice/preview'
             >
               {dictionary['navigation'].preview}
-            </MenuItem>
-            <MenuItem href={`/${locale}/apps/invoice/edit/4987`} exactMatch={false} activeUrl='/apps/invoice/edit'>
+            </MenuItem> */}
+          {/* <MenuItem href={`/${locale}/apps/invoice/edit/4987`} exactMatch={false} activeUrl='/apps/invoice/edit'>
               {dictionary['navigation'].edit}
-            </MenuItem>
-            <MenuItem href={`/${locale}/apps/invoice/add`}>{dictionary['navigation'].add}</MenuItem>
-          </SubMenu>
-          <SubMenu label={dictionary['navigation'].user} icon={<i className='ri-user-line' />}>
+            </MenuItem> */}
+          {/* <MenuItem href={`/${locale}/apps/invoice/add`}>{dictionary['navigation'].add}</MenuItem> */}
+          {/* </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].user} icon={<i className='ri-user-line' />}>
             <MenuItem href={`/${locale}/apps/user/list`}>{dictionary['navigation'].list}</MenuItem>
             <MenuItem href={`/${locale}/apps/user/view`}>{dictionary['navigation'].view}</MenuItem>
-          </SubMenu>
-          <SubMenu label={dictionary['navigation'].rolesPermissions} icon={<i className='ri-lock-2-line' />}>
+          </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].rolesPermissions} icon={<i className='ri-lock-2-line' />}>
             <MenuItem href={`/${locale}/apps/roles`}>{dictionary['navigation'].roles}</MenuItem>
             <MenuItem href={`/${locale}/apps/permissions`}>{dictionary['navigation'].permissions}</MenuItem>
-          </SubMenu>
-          <SubMenu label={dictionary['navigation'].pages} icon={<i className='ri-layout-left-line' />}>
-            <MenuItem href={`/${locale}/pages/user-profile`}>{dictionary['navigation'].userProfile}</MenuItem>
+          </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].pages} icon={<i className='ri-layout-left-line' />}> */}
+          {/* <MenuItem href={`/${locale}/pages/user-profile`}>{dictionary['navigation'].userProfile}</MenuItem>
             <MenuItem href={`/${locale}/pages/account-settings`}>{dictionary['navigation'].accountSettings}</MenuItem>
             <MenuItem href={`/${locale}/pages/faq`}>{dictionary['navigation'].faq}</MenuItem>
-            <MenuItem href={`/${locale}/pages/pricing`}>{dictionary['navigation'].pricing}</MenuItem>
-            <SubMenu label={dictionary['navigation'].miscellaneous}>
+            <MenuItem href={`/${locale}/pages/pricing`}>{dictionary['navigation'].pricing}</MenuItem> */}
+          {/* <SubMenu label={dictionary['navigation'].miscellaneous}>
               <MenuItem href={`/${locale}/pages/misc/coming-soon`} target='_blank'>
                 {dictionary['navigation'].comingSoon}
               </MenuItem>
@@ -195,18 +217,18 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
               <MenuItem href={`/${locale}/pages/misc/401-not-authorized`} target='_blank'>
                 {dictionary['navigation'].notAuthorized401}
               </MenuItem>
-            </SubMenu>
-          </SubMenu>
-          <SubMenu label={dictionary['navigation'].authPages} icon={<i className='ri-shield-keyhole-line' />}>
-            <SubMenu label={dictionary['navigation'].login}>
+            </SubMenu> */}
+          {/* </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].authPages} icon={<i className='ri-shield-keyhole-line' />}> */}
+          {/* <SubMenu label={dictionary['navigation'].login}>
               <MenuItem href={`/${locale}/pages/auth/login-v1`} target='_blank'>
                 {dictionary['navigation'].loginV1}
               </MenuItem>
               <MenuItem href={`/${locale}/pages/auth/login-v2`} target='_blank'>
                 {dictionary['navigation'].loginV2}
               </MenuItem>
-            </SubMenu>
-            <SubMenu label={dictionary['navigation'].register}>
+            </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].register}>
               <MenuItem href={`/${locale}/pages/auth/register-v1`} target='_blank'>
                 {dictionary['navigation'].registerV1}
               </MenuItem>
@@ -216,41 +238,41 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
               <MenuItem href={`/${locale}/pages/auth/register-multi-steps`} target='_blank'>
                 {dictionary['navigation'].registerMultiSteps}
               </MenuItem>
-            </SubMenu>
-            <SubMenu label={dictionary['navigation'].verifyEmail}>
+            </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].verifyEmail}>
               <MenuItem href={`/${locale}/pages/auth/verify-email-v1`} target='_blank'>
                 {dictionary['navigation'].verifyEmailV1}
               </MenuItem>
               <MenuItem href={`/${locale}/pages/auth/verify-email-v2`} target='_blank'>
                 {dictionary['navigation'].verifyEmailV2}
               </MenuItem>
-            </SubMenu>
-            <SubMenu label={dictionary['navigation'].forgotPassword}>
+            </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].forgotPassword}>
               <MenuItem href={`/${locale}/pages/auth/forgot-password-v1`} target='_blank'>
                 {dictionary['navigation'].forgotPasswordV1}
               </MenuItem>
               <MenuItem href={`/${locale}/pages/auth/forgot-password-v2`} target='_blank'>
                 {dictionary['navigation'].forgotPasswordV2}
               </MenuItem>
-            </SubMenu>
-            <SubMenu label={dictionary['navigation'].resetPassword}>
+            </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].resetPassword}>
               <MenuItem href={`/${locale}/pages/auth/reset-password-v1`} target='_blank'>
                 {dictionary['navigation'].resetPasswordV1}
               </MenuItem>
               <MenuItem href={`/${locale}/pages/auth/reset-password-v2`} target='_blank'>
                 {dictionary['navigation'].resetPasswordV2}
               </MenuItem>
-            </SubMenu>
-            <SubMenu label={dictionary['navigation'].twoSteps}>
+            </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].twoSteps}>
               <MenuItem href={`/${locale}/pages/auth/two-steps-v1`} target='_blank'>
                 {dictionary['navigation'].twoStepsV1}
               </MenuItem>
               <MenuItem href={`/${locale}/pages/auth/two-steps-v2`} target='_blank'>
                 {dictionary['navigation'].twoStepsV2}
               </MenuItem>
-            </SubMenu>
-          </SubMenu>
-          <SubMenu label={dictionary['navigation'].wizardExamples} icon={<i className='ri-git-commit-line' />}>
+            </SubMenu> */}
+          {/* </SubMenu> */}
+          {/* <SubMenu label={dictionary['navigation'].wizardExamples} icon={<i className='ri-git-commit-line' />}>
             <MenuItem href={`/${locale}/pages/wizard-examples/checkout`}>{dictionary['navigation'].checkout}</MenuItem>
             <MenuItem href={`/${locale}/pages/wizard-examples/property-listing`}>
               {dictionary['navigation'].propertyListing}
@@ -258,11 +280,11 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
             <MenuItem href={`/${locale}/pages/wizard-examples/create-deal`}>
               {dictionary['navigation'].createDeal}
             </MenuItem>
-          </SubMenu>
-          <MenuItem href={`/${locale}/pages/dialog-examples`} icon={<i className='ri-tv-2-line' />}>
+          </SubMenu> */}
+          {/* <MenuItem href={`/${locale}/pages/dialog-examples`} icon={<i className='ri-tv-2-line' />}>
             {dictionary['navigation'].dialogExamples}
-          </MenuItem>
-          <SubMenu label={dictionary['navigation'].widgetExamples} icon={<i className='ri-bar-chart-box-line' />}>
+          </MenuItem> */}
+          {/* <SubMenu label={dictionary['navigation'].widgetExamples} icon={<i className='ri-bar-chart-box-line' />}>
             <MenuItem href={`/${locale}/pages/widget-examples/basic`}>{dictionary['navigation'].basic}</MenuItem>
             <MenuItem href={`/${locale}/pages/widget-examples/advanced`}>{dictionary['navigation'].advanced}</MenuItem>
             <MenuItem href={`/${locale}/pages/widget-examples/statistics`}>
@@ -273,10 +295,10 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
               {dictionary['navigation'].gamification}
             </MenuItem>
             <MenuItem href={`/${locale}/pages/widget-examples/actions`}>{dictionary['navigation'].actions}</MenuItem>
-          </SubMenu>
+          </SubMenu> */}
         </MenuSection>
-        <MenuSection label={dictionary['navigation'].formsAndTables}>
-          <MenuItem href={`/${locale}/forms/form-layouts`} icon={<i className='ri-layout-4-line' />}>
+        {/* <MenuSection label={dictionary['navigation'].formsAndTables}> */}
+        {/* <MenuItem href={`/${locale}/forms/form-layouts`} icon={<i className='ri-layout-4-line' />}>
             {dictionary['navigation'].formLayouts}
           </MenuItem>
           <MenuItem href={`/${locale}/forms/form-validation`} icon={<i className='ri-checkbox-multiple-line' />}>
@@ -287,8 +309,8 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
           </MenuItem>
           <MenuItem href={`/${locale}/react-table`} icon={<i className='ri-table-alt-line' />}>
             {dictionary['navigation'].reactTable}
-          </MenuItem>
-          <MenuItem
+          </MenuItem> */}
+        {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/form-elements`}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
@@ -303,54 +325,54 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
             icon={<i className='ri-table-2' />}
           >
             {dictionary['navigation'].muiTables}
-          </MenuItem>
-        </MenuSection>
-        <MenuSection label={dictionary['navigation'].chartsMisc}>
-          <SubMenu label={dictionary['navigation'].charts} icon={<i className='ri-bar-chart-2-line' />}>
+          </MenuItem> */}
+        {/* </MenuSection> */}
+        {/* <MenuSection label={dictionary['navigation'].chartsMisc}> */}
+        {/* <SubMenu label={dictionary['navigation'].charts} icon={<i className='ri-bar-chart-2-line' />}>
             <MenuItem href={`/${locale}/charts/apex-charts`}>{dictionary['navigation'].apex}</MenuItem>
             <MenuItem href={`/${locale}/charts/recharts`}>{dictionary['navigation'].recharts}</MenuItem>
-          </SubMenu>
-          <MenuItem
+          </SubMenu> */}
+        {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/foundation`}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-pantone-line' />}
           >
             {dictionary['navigation'].foundation}
-          </MenuItem>
-          <MenuItem
+          </MenuItem> */}
+        {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/components`}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-toggle-line' />}
           >
             {dictionary['navigation'].components}
-          </MenuItem>
-          <MenuItem
+          </MenuItem> */}
+        {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/menu-examples/overview`}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-menu-search-line' />}
           >
             {dictionary['navigation'].menuExamples}
-          </MenuItem>
-          <MenuItem
+          </MenuItem> */}
+        {/* <MenuItem
             href='https://themeselection.com/support'
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-lifebuoy-line' />}
           >
             {dictionary['navigation'].raiseSupport}
-          </MenuItem>
-          <MenuItem
+          </MenuItem> */}
+        {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}`}
             suffix={<i className='ri-external-link-line text-xl' />}
             target='_blank'
             icon={<i className='ri-book-line' />}
           >
             {dictionary['navigation'].documentation}
-          </MenuItem>
-          <SubMenu label={dictionary['navigation'].others} icon={<i className='ri-more-line' />}>
+          </MenuItem> */}
+        {/* <SubMenu label={dictionary['navigation'].others} icon={<i className='ri-more-line' />}>
             <MenuItem suffix={<Chip label='New' size='small' color='info' />}>
               {dictionary['navigation'].itemWithBadge}
             </MenuItem>
@@ -369,8 +391,8 @@ const VerticalMenu = ({ dictionary, scrollMenu }) => {
               </SubMenu>
             </SubMenu>
             <MenuItem disabled>{dictionary['navigation'].disabledMenu}</MenuItem>
-          </SubMenu>
-        </MenuSection>
+          </SubMenu> */}
+        {/* </MenuSection> */}
       </Menu>
       {/* <Menu
           popoutMenuOffset={{ mainAxis: 10 }}
